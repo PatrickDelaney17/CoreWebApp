@@ -28,6 +28,12 @@ namespace MyCoreWebApp.Controllers
 
             return View();
         }
+        public IActionResult GettingStarted()
+        {
+            ViewData["Message"] = "Getting Started";
+
+            return View();
+        }
 
         public IActionResult Error()
         {
