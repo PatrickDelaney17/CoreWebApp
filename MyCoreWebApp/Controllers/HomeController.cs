@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using MyCoreWebApp.Models;
+using Bogus;
 
 namespace MyCoreWebApp.Controllers
 {
