@@ -9,6 +9,10 @@
 
 <br />
 
+# Framworks Ref
+* https://github.com/bchavez/Bogus
+
+< br />
 >### Create Local Repo
 > + [instructions with pictures](https://docs.microsoft.com/en-us/visualstudio/python/quickstart-03-python-in-visual-studio-project-from-repository?view=vs-2017)
 > 1. In Visual Studio it should open and by default have the "Team Explorer" window open.
