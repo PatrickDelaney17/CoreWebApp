@@ -1,0 +1,67 @@
+﻿@model MyCoreWebApp.Models.DataModels.CustomerDataModel
+
+@{
+    ViewData["Title"] = "Customer Details";
+    //Keep the string in an expected format, trim any potential spaces that could exist...
+    string imgPath = Model.customerAvatar.ToLower().Trim();
+}
+
+<h2>Customer Details</h2>
+
+<div>
+    <h4>CustomerDataModel</h4>
+    @*never assume the value is there...do a check before trying to rendor an image*@
+    @if (!string.IsNullOrWhiteSpace(imgPath))
+    {
+    <img src="@imgPath" alt="profile image not found" style="hight:180px;" />
+    }
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.customerId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.customerId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.customerUserName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.customerUserName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.customerFirstName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.customerFirstName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.customerLastName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.customerLastName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.customerFullName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.customerFullName)
+        </dd>
+    </dl>
+</div>
+<div>
+    @* using html code because i'm being lazy and don't want to figure out why bootstrap icons are not all loading...
+        * cheatsheet here: https://www.toptal.com/designers/htmlarrows/symbols/
+        * Note the font size added using 'em' - multiple ways to do this https://cssreference.io/property/font-size/
+   Edit page doesn't exist 
+    *@
+    <a asp-action="Index" class="btn btn-primary btn-lg"><span style="font-size:1.4em;">&#8592;</span> Back to List</a>
+
+    @*@Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ })*@
+</div>

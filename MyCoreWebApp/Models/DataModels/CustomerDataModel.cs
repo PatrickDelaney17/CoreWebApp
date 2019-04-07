@@ -16,6 +16,9 @@ namespace MyCoreWebApp.Models.DataModels
         [StringLength(100, MinimumLength = 5)]
         public string customerUserName { get; set; }
 
+        [Display(Name = "Profile Picture")]
+        public string customerAvatar { get; set; }
+
         [Display(Name = "First Name")]
         [StringLength(100, MinimumLength = 3)]
         public string customerFirstName { get; set; }
